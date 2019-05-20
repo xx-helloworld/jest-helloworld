@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Button snapshot 1`] = `
+<button>
+  <span>
+    开始
+  </span>
+</button>
+`;
+
+exports[`Button is a Vue instance 1`] = `
+<button>
+  <span>
+    开始
+  </span>
+</button>
+`;
+
+exports[`Button snapshot test 1`] = `
+<button>
+  <span>
+    开始
+  </span>
+</button>
+`;

@@ -1,0 +1,27 @@
+{
+  "name": "jest-helloworld",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.1",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "lerna": "^3.13.0",
+    "regenerator-runtime": "^0.11.0",
+    "vue": "^2.6.10",
+    "vue-jest": "^4.0.0-bate.2"
+  }
+}
