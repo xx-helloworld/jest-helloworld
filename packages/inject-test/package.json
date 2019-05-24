@@ -1,0 +1,25 @@
+{
+  "name": "inject-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^24.8.0",
+    "lerna": "^3.13.0",
+    "regenerator-runtime": "^0.11.0",
+    "vue-template-compiler": "^2.4.4"
+  }
+}
