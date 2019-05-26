@@ -1,21 +1,16 @@
 <template>
   <div>
     <span>{{ msg }}</span>
-    <slot />
+    <slot/>
   </div>
 </template>
 
 <script>
 export default {
   name: "parent",
-  provide() {
-    return {
-      parent: this
-    };
-  },
   props: {
-    msg:{
-      type: "String",
+    msg: {
+      type: String,
       default: "heihei"
     }
   }

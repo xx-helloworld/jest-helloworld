@@ -1,13 +1,33 @@
-import { shallowMount } from "@vue/test-utils";
+import { shallowMoun, mount } from "@vue/test-utils";
 import Child from "../child.vue";
 import Parent from "../parent.vue";
 
-describe("Message", () => {
+describe("Inject", () => {
   it("test inject", () => {
     const msg = "new message";
-    const wrapper = shallowMount(Parent, {
-      propsData: { msg }
+    const childMsg = "child-msg";
+
+    // const child = shallowMount(Child, {
+    //   inject: ["parent"]
+    // });
+
+    const child = mount(Child, {
+      propsData: { childMsg }
     });
-    expect(wrapper.text()).toBe(msg);
+    expect(child.text()).toBe(childMsg);
+
+    const wrapper = mount(Parent, {
+      propsData: { msg },
+      // provide: {
+      //   parent() {
+      //     return "fooValue";
+      //   }
+      // },
+      slots: {
+        default: [child]
+      }
+    });
+    // console.log(wrapper.html());
+    expect(wrapper.find("span").text()).toBe(msg);
   });
 });
