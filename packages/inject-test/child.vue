@@ -5,7 +5,7 @@
 <script>
 export default {
   name: "child",
-  // inject: ['parent'],
+  // inject: ['parentyar'],
   // props: {
   //   childMsg: {
   //     type: String,
