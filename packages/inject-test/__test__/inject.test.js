@@ -17,17 +17,18 @@ describe("Inject", () => {
     expect(child.text()).toBe(childMsg);
 
     const wrapper = mount(Parent, {
-      propsData: { msg },
+      propsData: { msg }
       // provide: {
       //   parent() {
       //     return "fooValue";
       //   }
       // },
       slots: {
-        default: [child]
+        default: Child // correct
+        // default: child  // wrong
       }
     });
-    // console.log(wrapper.html());
+    console.log(wrapper.html());
     expect(wrapper.find("span").text()).toBe(msg);
   });
 });
