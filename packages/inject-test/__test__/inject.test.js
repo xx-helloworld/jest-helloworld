@@ -3,32 +3,35 @@ import Child from "../child.vue";
 import Parent from "../parent.vue";
 
 describe("Inject", () => {
+  it("test parent", () => {
+    const msg = "new message";
+    const childMsg = "new child message";
+
+    const parent = {
+      render(h) {
+        return h(Parent, { props: { msg } }, [
+          h(Child, { props: { childMsg } })
+        ]);
+      }
+    };
+
+    const wrapper = mount(parent);
+
+    expect(wrapper.find("span").text()).toBe(msg);
+    expect(wrapper.find("h1").text()).toBe(childMsg);
+  });
   it("test inject", () => {
     const msg = "new message";
-    const childMsg = "child-msg";
 
-    // const child = shallowMount(Child, {
-    //   inject: ["parent"]
-    // });
-
-    const child = mount(Child, {
-      propsData: { childMsg }
-    });
-    expect(child.text()).toBe(childMsg);
-
-    const wrapper = mount(Parent, {
-      propsData: { msg }
-      // provide: {
-      //   parent() {
-      //     return "fooValue";
-      //   }
-      // },
-      slots: {
-        default: Child // correct
-        // default: child  // wrong
+    const parent = {
+      render(h) {
+        return h(Parent, { props: { msg } }, [h(Child)]);
       }
-    });
-    console.log(wrapper.html());
+    };
+
+    const wrapper = mount(parent);
+
     expect(wrapper.find("span").text()).toBe(msg);
+    expect(wrapper.find("h1").text()).toBe(msg);
   });
 });

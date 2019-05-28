@@ -5,15 +5,15 @@
 <script>
 export default {
   name: "child",
-  // inject: ['parent'],
-  // props: {
-  //   childMsg: {
-  //     type: String,
-  //     default() {
-  //       return this.msg;
-  //     }
-  //   }
-  // }
-  props: ["childMsg"]
+  inject: ["parent"],
+  props: {
+    childMsg: {
+      type: String,
+      default() {
+        return this.parent.msg;
+      }
+    }
+  }
+  // props: ["childMsg"]
 };
 </script>

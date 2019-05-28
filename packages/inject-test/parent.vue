@@ -8,9 +8,11 @@
 <script>
 export default {
   name: "parent",
-  // provide: {
-  //   parent: this
-  // },
+  provide() {
+    return {
+      parent: this
+    };
+  },
   props: {
     msg: {
       type: String,
