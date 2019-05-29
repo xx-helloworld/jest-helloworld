@@ -21,10 +21,16 @@ Vue Test Utils 是 Vue.js 官方的单元测试实用工具库。主要实现了
 - [x] snapshots 场景测试
 - [ ] ES class modules
 - [ ] shallowMount 测试
-- [ ] 复杂控件测试 demo
+- [x] 复杂控件测试 demo
 - [ ] webpack
 - [ ] 如何监控 jest 测试
 - [ ] 测试覆盖率
+
+## 遇到的一些问题
+
+`jsdom`不支持 windows 的方法
+
+`jest`主要测试`react`，对 `Vue` 不是很友好，而其中的`jsx`语言都无法使用很多都只能用`createElement`的语法，`vue-utils-tests`也没有很好的 `api` 去支持
 
 - [Vue Test Utils](https://vue-test-utils.vuejs.org/zh/)
 - [Vue Test Utils example](https://github.com/vuejs/vue-test-utils-jest-example)
