@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inject test util 1`] = `"<div><span>msg</span> <h1>childMsg</h1></div>"`;
